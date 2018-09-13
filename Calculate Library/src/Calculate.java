@@ -38,13 +38,31 @@ public class Calculate {
 		double product = (b*b)-(4*a*c);
 		return product; //calculates discriminant from input
 	}
-	public static int toImproperFrac(int wholenum, int numerator, int denominator) {
+	public static String toImproperFrac(int wholenum, int numerator, int denominator) {
 		int answernumerator;
 		String answer;
 		answernumerator= (wholenum*denominator)+numerator;
 		answer = (answernumerator+  "/" + denominator); //converts mixed number to improper fraction
 		return answer; 
 	}
-
+	public static String toMixedNum(int num, int denom) {
+		String answer;
+		int wholenum = (num/denom);
+		int newnumer = (num%denom);
+		answer = (wholenum+ "_" + newnumer+"/"+denom); //converts improper to mixed fraction
+		return answer; 
+	}
+	public static String foil(int a, int b, int c, int d, String x) {
+		String answer;
+		int endax = (a*c);
+		int endbx = (b*c)+(a*d);
+		int endc = (b*d);
+		answer = (endax+x+"^"+"2"+" + "+endbx+x+" + "+endc); //foils for binomial multiplication
+		return answer; 
+	}
+	public static boolean isDivisibleBy(int a, int b) {
+		if a % b == 0 {
+			answer=
+		} 
 	}
 }
