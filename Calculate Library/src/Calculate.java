@@ -60,9 +60,15 @@ public class Calculate {
 		answer = (endax+x+"^"+"2"+" + "+endbx+x+" + "+endc); //foils for binomial multiplication
 		return answer; 
 	}
-	public static boolean isDivisibleBy(int a, int b) {
-		if a % b == 0 {
-			answer=
-		} 
+	public static boolean isDivisibleBy(int a, int b) { //returns true if a is divisible by b
+		if (a%b == 0) {
+	    return true;
+		}
+		return false;
 	}
-}
+	public static double absValue(double a) {
+		double answer = java.lang.Math.abs(a);
+		return answer;
+	}
+	
+	}
