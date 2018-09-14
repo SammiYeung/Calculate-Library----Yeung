@@ -64,11 +64,35 @@ public class Calculate {
 		if (a%b == 0) {
 	    return true;
 		}
+		else
 		return false;
 	}
-	public static double absValue(double a) {
-		double answer = java.lang.Math.abs(a);
-		return answer;
+	public static double absValue(double a) { //returns absvalue of input
+		if (a<0) {
+			return (a*-1);
+		}
+			else
+				return a;
 	}
-	
+	public static double max(double a, double b) {
+		if (a>b) {
+		return a;
+		}
+		else
+		return b;
 	}
+	public static double max(double a, double b, double c) {
+		if (a>b) {
+		return a;
+		}
+		else if (b>a)
+		return b;
+		else if (c>b)
+		return c;
+		else if (c>a)
+		return c;
+		return c;
+		}
+	}
+
+		
