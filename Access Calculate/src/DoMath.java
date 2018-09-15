@@ -18,5 +18,6 @@ public class DoMath {
 		System.out.println(Calculate.isDivisibleBy(5,3));
 		System.out.println(Calculate.absValue(-6));
 		System.out.println(Calculate.max(9, 7));
+		System.out.println(Calculate.max(9, 7, 10));
 	}
 }

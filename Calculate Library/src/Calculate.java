@@ -74,25 +74,31 @@ public class Calculate {
 			else
 				return a;
 	}
-	public static double max(double a, double b) {
+	public static double max(double a, double b) { //find the max between the inputted values
 		if (a>b) {
 		return a;
 		}
 		else
 		return b;
 	}
-	public static double max(double a, double b, double c) {
-		if (a>b) {
+	public static double max(double a, double b, double c) { //find the max between the inputted values
+		if (a>b && a>c) {
 		return a;
 		}
-		else if (b>a)
+		else if (b>a && b>c)
 		return b;
-		else if (c>b)
-		return c;
-		else if (c>a)
-		return c;
+		else
 		return c;
 		}
 	}
-
+	public static double round2(double a) { //rounds input to 2 decimal places
+		for(a=1;a<=n;i++);
+	}
+	public static int factorial(int a) { //returns factorial of value passed
+	}
+	public static int isPrime(int a) { //determines whether input is prime
+	}
+	public static int gcf(int a, int b) { //finds GCF of two integers
+	}
+	public static double sqrt(double a) { //returns approximation of the square root
 		
