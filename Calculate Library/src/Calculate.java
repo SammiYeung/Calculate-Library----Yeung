@@ -74,14 +74,14 @@ public class Calculate {
 			else
 				return a;
 	}
-	public static double max(double a, double b) { //find the max between the inputted values
+	public static double max(double a, double b) { //find the max between the inputed values
 		if (a>b) {
 		return a;
 		}
 		else
 		return b;
 	}
-	public static double max(double a, double b, double c) { //find the max between the inputted values
+	public static double max(double a, double b, double c) { //find the max between the inputed values
 		if (a>b && a>c) {
 		return a;
 		}
@@ -89,10 +89,9 @@ public class Calculate {
 		return b;
 		else
 		return c;
-		}
 	}
-	public static double round2(double a) { //rounds input to 2 decimal places
-		for(a=1;a<=n;i++);
+	public static double round2(double a, int i) { //rounds input to 2 decimal places
+		for(a=1;a<=5;i++);
 	}
 	public static int factorial(int a) { //returns factorial of value passed
 	}
