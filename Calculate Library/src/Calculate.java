@@ -83,21 +83,50 @@ public class Calculate {
 	}
 	public static double max(double a, double b, double c) { //find the max between the inputed values
 		if (a>b && a>c) {
-		return a;
-		}
+		return a; }
 		else if (b>a && b>c)
 		return b;
 		else
 		return c;
 	}
-	public static double round2(double a, int i) { //rounds input to 2 decimal places
-		for(a=1;a<=5;i++);
+	public static double round2(double a) { //rounds input to 2 decimal places
+		double newnum = a*1000;
+		double newnum2 = a*100;
+		double answer = newnum%10;
+			if (answer >= 5) {
+			return (int)(newnum2 + 1)/100;
+			}
+			else
+			return (int)newnum2/100; //DOESN'T WORK
+	}
+	public static double exponent(double base, int exponent) {
+		double answer=1;
+		for(int i=0;i<exponent;i++)
+			answer *= base;
+		return answer;
 	}
 	public static int factorial(int a) { //returns factorial of value passed
+		int answer=1;
+		for(int i=1;i<=a;i++)
+			answer=answer*=i;
+		return answer;
 	}
-	public static int isPrime(int a) { //determines whether input is prime
+	public static boolean isPrime(int a) { //determines whether input is prime
+		for(int i=2;i<=7;i++)
+		return Calculate.isDivisibleBy(a, i);
+		return false; //GIVES THE OPPOSITE ANSWER
 	}
-	public static int gcf(int a, int b) { //finds GCF of two integers
-	}
+	//public static int gcf(int a, int b) { //finds GCF of two integers
+	//unsure how tostart
+	
 	public static double sqrt(double a) { //returns approximation of the square root
+		double answer = Calculate.exponent(a, (int) 0.5);
+		return answer;
+	//DOESN'T WORK always gives 1.0?
 		
+		
+		
+		
+		
+	}
+}
