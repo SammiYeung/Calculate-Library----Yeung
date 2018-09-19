@@ -112,12 +112,31 @@ public class Calculate {
 		return answer;
 	}
 	public static boolean isPrime(int a) { //determines whether input is prime
-		for(int i=2;i<=7;i++)
-		return Calculate.isDivisibleBy(a, i);
-		return false; //GIVES THE OPPOSITE ANSWER
+		boolean answer = true;
+		if (a>=4) {
+		for(int i=2;i<=7;i++) {
+			if (Calculate.isDivisibleBy(a, i)) {
+				answer=false; 
+			}
+		if (a<=3) {
+			answer=true; }
+		if (a==5) {
+			answer=true; }
+		if (a==7) {
+			answer=true; }
+		}
+		}
+		return answer;
 	}
-	//public static int gcf(int a, int b) { //finds GCF of two integers
-	//unsure how tostart
+
+	public static int gcf(int a, int b) { //finds GCF of two integers
+		int answer=b;
+		if (a>b) {
+			for(int i=b;i%a!=0;i--)
+				answer=i;
+		}
+				return answer;//doesn't work
+	}
 	
 	public static double sqrt(double a) { //returns approximation of the square root
 		double answer = Calculate.exponent(a, (int) 0.5);
