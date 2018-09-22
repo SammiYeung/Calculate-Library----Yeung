@@ -129,23 +129,38 @@ public class Calculate {
 		return answer;
 	}
 
-	public static int gcf(int a, int b) { //finds GCF of two integers
-		int answer=b;
-		if (a>b) {
-			for(int i=b;i%a!=0;i--)
-				answer=i;
+	public static int gcf(int a, int b){  //returns the greatest common denominator of the two inputed numbers
+	    int answer = a;
+	    if(a>b) {
+	    for(int i = b; b>=1; i--) {
+	    	if(Calculate.isDivisibleBy(a, i) && Calculate.isDivisibleBy(b, i)) {
+	    		return i; 
+	    		} 
+	    	}
+	    }
+	    else if(a<b) {
+		for(int i = a; a>=1; i--) {
+			if((Calculate.isDivisibleBy(a,i)) && (Calculate.isDivisibleBy(b,i))) {
+				return i;
+			}
 		}
-				return answer;//doesn't work
+	}
+	return answer;
 	}
 	
 	public static double sqrt(double a) { //returns approximation of the square root
-		double answer = Calculate.exponent(a, (int) 0.5);
-		return answer;
+		double approx = 1.00;
+		double diff = 1;
+			while(diff>= 0.005) {
+				approx = ((a/approx)+approx)/2;
+				diff = Calculate.absValue(a - (approx*approx));
+			}
+			return Calculate.round2(approx);
+	}
 	//DOESN'T WORK always gives 1.0?
 		
 		
 		
 		
 		
-	}
 }
