@@ -2,62 +2,62 @@
  * @author Sammi Yeung
  * @version September 6, 2018
  */
-public class Calculate {
+public class Calculate { //returns square of input
 	public static int square(int number) {
 		int answer;
 		answer = number*number;
-		return answer; //returns square of input
+		return answer; 
 	}
 
-	public static int cube(int number) {
+	public static int cube(int number) { //returns cube of input
 		int answer;
 		answer = number*number*number;
-		return answer; //returns cube of input
+		return answer; 
 	}
-	public static double average(double num1, double num2) {
+	public static double average(double num1, double num2) { //returns average of inputs (two doubles)
 		double sum;
 		sum = num1+num2;
-		return sum/2; //returns average of input (two doubles)s
+		return sum/2; 
 	}
-	public static double average(double num1, double num2, double num3) {
+	public static double average(double num1, double num2, double num3) { //returns average of input (three doubles)
 		double sum;
 		sum = num1+num2+num3;
-		return sum/3; //returns average of input (three doubles)
+		return sum/3; 
 	}
-	public static double toDegrees(double number) {
+	public static double toDegrees(double number) { //converts radians to degrees
 		double product;
 		product = (180/3.14159)*number;
-		return product; //converts radians to degrees
+		return product; 
 	}
-	public static double toRadians(double number) {
+	public static double toRadians(double number) { //converts degrees to radians
 		double product;
 		product = (3.14159/180)*number;
-		return product; //converts degrees to radians
+		return product; 
 	}
-	public static double discriminant(double a, double b, double c) {
+	public static double discriminant(double a, double b, double c) { //calculates discriminant from input
 		double product = (b*b)-(4*a*c);
-		return product; //calculates discriminant from input
+		return product; 
 	}
-	public static String toImproperFrac(int wholenum, int numerator, int denominator) {
+	public static String toImproperFrac(int wholenum, int numerator, int denominator) { //converts mixed number to improper fraction
 		int answernumerator;
 		String answer;
 		answernumerator= (wholenum*denominator)+numerator;
-		answer = (answernumerator+  "/" + denominator); //converts mixed number to improper fraction
+		answer = (answernumerator+  "/" + denominator); 
 		return answer; 
 	}
-	public static String toMixedNum(int num, int denom) {
+	public static String toMixedNum(int num, int denom) { //converts improper to mixed fraction
 		String answer;
 		int wholenum = (num/denom);
 		int newnumer = (num%denom);
-		answer = (wholenum+ "_" + newnumer+"/"+denom); //converts improper to mixed fraction
+		answer = (wholenum+ "_" + newnumer+"/"+denom); 
 		return answer; 
 	}
-	public static String foil(int a, int b, int c, int d, String x) {
+	public static String foil(int a, int b, int c, int d, String x) { //foils for binomial multiplication
 		String answer;
 		int endax = (a*c);
 		int endbx = (b*c)+(a*d);
 		int endc = (b*d);
-		answer = (endax+x+"^"+"2"+" + "+endbx+x+" + "+endc); //foils for binomial multiplication
+		answer = (endax+x+"^"+"2"+" + "+endbx+x+" + "+endc); 
 		return answer; 
 	}
 	public static boolean isDivisibleBy(int a, int b) { //returns true if a is divisible by b
@@ -67,21 +67,21 @@ public class Calculate {
 		else
 		return false;
 	}
-	public static double absValue(double a) { //returns absvalue of input
+	public static double absValue(double a) { //returns absolute value of input
 		if (a<0) {
 			return (a*-1);
 		}
 			else
 				return a;
 	}
-	public static double max(double a, double b) { //find the max between the inputed values
+	public static double max(double a, double b) { //find the max between the inputed values (2)
 		if (a>b) {
 		return a;
 		}
 		else
 		return b;
 	}
-	public static double max(double a, double b, double c) { //find the max between the inputed values
+	public static double max(double a, double b, double c) { //find the max between the inputed values (3)
 		if (a>b && a>c) {
 		return a; }
 		else if (b>a && b>c)
@@ -157,7 +157,7 @@ public class Calculate {
 			}
 			return Calculate.round2(approx);
 	}
-	//DOESN'T WORK always gives 1.0?
+
 		
 		
 		
