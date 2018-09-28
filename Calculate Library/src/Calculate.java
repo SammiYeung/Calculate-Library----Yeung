@@ -69,9 +69,9 @@ public class Calculate { //returns square of input
 		return answer; 
 	}
 	
-	public static boolean isDivisibleBy(int a, int b) { //returns true if a is divisible by b
-		if (b==0) throw new IllegalArgumentException("numbers cannot be divided by zero as it is undefined");
-		if (a%b == 0) {
+	public static boolean isDivisibleBy(int dividend, int divisor) { //returns true if a is divisible by b
+		if (divisor==0) throw new IllegalArgumentException("numbers cannot be divided by zero as it is undefined");
+		if (dividend%divisor == 0) {
 	    return true;
 		}
 		else
@@ -179,15 +179,20 @@ public class Calculate { //returns square of input
 			return Calculate.round2(approx);
 	}
 	
-	public static void quadForm(int a, int b, int c) { //approximates real roots usi;ng quadratic formula
-		double numanswer1 = (-b + Calculate.sqrt(Calculate.discriminant(a, b, c)));
-		double denomanswer = 2*a;
-		double trueanswer1 = numanswer1/denomanswer;
-		double numanswer2 = (-b - Calculate.sqrt(Calculate.discriminant(a, b, c)));
-		if(Calculate.discriminant(a, b, c)==)
-		System.out.println("no real roots");
-		System.out.println(trueanswer);
-		System.out.println(trueanswer1");
+	public static String quadForm(int a, int b, int c) { //approximates real roots using quadratic formula
+		double numanswer1 = (-b + sqrt(discriminant(a, b, c)));
+		double numanswer2 = (-b - sqrt(discriminant(a, b, c)));
+		double root1 = numanswer1/(2*a);
+		double root2 = numanswer2/(2*a);
+		if(discriminant(a, b, c)>0) {
+				return (Calculate.round2(root1)+ " and " + Calculate.round2(root2));
+		}
+			else if(discriminant(a, b, c)==0) {
+				return (Calculate.round2(root1))+"";
+		}
+			else {
+				return ("no real roots");
+		}
 	}
 	
 
