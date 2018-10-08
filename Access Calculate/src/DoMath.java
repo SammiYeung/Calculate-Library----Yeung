@@ -19,6 +19,7 @@ public class DoMath {
 		System.out.println(Calculate.absValue(6));
 		System.out.println(Calculate.max(9, 7));
 		System.out.println(Calculate.max(9, 7, 10));
+		System.out.println(Calculate.min(9, 7));
 		System.out.println(Calculate.round2(123.63578));
 		System.out.println(Calculate.exponent(2,9));
 		System.out.println(Calculate.factorial(2));
