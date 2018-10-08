@@ -109,7 +109,7 @@ public class Calculate { //returns square of input
 		}
 		else
 		return b;
-	}
+	} 
 	
 	public static double round2(double a) { //rounds input to 2 decimal places
 		double newnum = a*1000;
