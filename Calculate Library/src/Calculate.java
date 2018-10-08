@@ -68,7 +68,7 @@ public class Calculate { //returns square of input
 		answer = (endax+x+"^"+"2"+" + "+endbx+x+" + "+endc); 
 		return answer; 
 	}
-	
+	//PART TWO
 	public static boolean isDivisibleBy(int dividend, int divisor) { //returns true if a is divisible by b
 		if (divisor==0) throw new IllegalArgumentException("numbers cannot be divided by zero as it is undefined");
 		if (dividend%divisor == 0) {
@@ -103,6 +103,14 @@ public class Calculate { //returns square of input
 		return c;
 	}
 	
+	public static double min(int a, int b) { //find the max between the inputed values (2)
+		if (a<b) {
+		return a;
+		}
+		else
+		return b;
+	}
+	
 	public static double round2(double a) { //rounds input to 2 decimal places
 		double newnum = a*1000;
 		double newnum2 = a*100;
@@ -113,7 +121,7 @@ public class Calculate { //returns square of input
 			else
 			return (int)newnum2/100;
 	}
-	
+	//PART THREE
 	public static double exponent(double base, int exponent) {
 		double answer=1;
 		if (exponent<=0) throw new IllegalArgumentException("negative exponents cannot be accepted, input a positive exponent");
@@ -178,7 +186,7 @@ public class Calculate { //returns square of input
 			}
 			return Calculate.round2(approx);
 	}
-	
+//PART FOUR
 	public static String quadForm(int a, int b, int c) { //approximates real roots using quadratic formula
 		double numanswer1 = (-b + sqrt(discriminant(a, b, c)));
 		double numanswer2 = (-b - sqrt(discriminant(a, b, c)));
@@ -194,7 +202,6 @@ public class Calculate { //returns square of input
 				return ("no real roots");
 		}
 	}
-	
 
 		
 		
