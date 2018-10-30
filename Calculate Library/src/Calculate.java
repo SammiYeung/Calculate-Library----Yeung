@@ -204,7 +204,7 @@ public class Calculate { //returns square of input
 	}
 
 		
-		
+	
 		
 		
 		
