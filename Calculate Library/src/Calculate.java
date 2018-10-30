@@ -182,24 +182,24 @@ public class Calculate { //returns square of input
 		if (a<0) throw new IllegalArgumentException("Square roots of negative numbers are imaginary, please input a positive double");
 			while(diff>= 0.005) {
 				approx = ((a/approx)+approx)/2;
-				diff = Calculate.absValue(a - (approx*approx));
+				diff = absValue(a - (approx*approx));
 			}
-			return Calculate.round2(approx);
+			return round2(approx);
 	}
 //PART FOUR
 	public static String quadForm(int a, int b, int c) { //approximates real roots using quadratic formula
+		if (discriminant(a, b, c)<0) {
+			return ("no real roots");
+		}
 		double numanswer1 = (-b + sqrt(discriminant(a, b, c)));
 		double numanswer2 = (-b - sqrt(discriminant(a, b, c)));
 		double root1 = numanswer1/(2*a);
 		double root2 = numanswer2/(2*a);
 		if(discriminant(a, b, c)>0) {
-				return (Calculate.round2(root1)+ " and " + Calculate.round2(root2));
+			return round2(root1) + " and " + round2(root2); //root1 is the larger number as it was the sqrt of the discriminant added as opposed to subtracted
 		}
-			else if(discriminant(a, b, c)==0) {
-				return (Calculate.round2(root1))+"";
-		}
-			else {
-				return ("no real roots");
+		else {
+			return (round2(root1))+"";
 		}
 	}
 
