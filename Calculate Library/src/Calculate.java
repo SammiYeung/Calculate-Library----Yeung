@@ -103,7 +103,7 @@ public class Calculate { //returns square of input
 		return c;
 	}
 	
-	public static double min(int a, int b) { //find the max between the inputed values (2)
+	public static double min(int a, int b) { //find the min between the inputed values (2)
 		if (a<b) {
 		return a;
 		}
@@ -112,15 +112,12 @@ public class Calculate { //returns square of input
 	} 
 	
 	public static double round2(double a) { //rounds input to 2 decimal places
-		double newnum = a*1000;
-		double newnum2 = a*100;
-		double answer = newnum%10;
-			if (answer >= 5) {
-			return (int)(newnum2 + 1)/100;
-			}
-			else
-			return (int)newnum2/100;
+		double truncatable = a*100;
+		double answer = (truncatable + 0.5);
+		double truncated = (int) answer;
+			return truncated/100;
 	}
+	
 	//PART THREE
 	public static double exponent(double base, int exponent) {
 		double answer=1;
@@ -180,13 +177,20 @@ public class Calculate { //returns square of input
 		double approx = 1.00;
 		double diff = 1;
 		if (a<0) throw new IllegalArgumentException("Square roots of negative numbers are imaginary, please input a positive double");
-			while(diff>= 0.005) {
+			while(diff >= 0.005) {
 				approx = ((a/approx)+approx)/2;
 				diff = absValue(a - (approx*approx));
 			}
 			return round2(approx);
 	}
 //PART FOUR
+	public static double min2(double a, double b) { //find the max between the inputed values (2)
+		if (a<b) {
+		return a;
+		}
+		else
+		return b;
+	} 
 	public static String quadForm(int a, int b, int c) { //approximates real roots using quadratic formula
 		if (discriminant(a, b, c)<0) {
 			return ("no real roots");
@@ -195,8 +199,11 @@ public class Calculate { //returns square of input
 		double numanswer2 = (-b - sqrt(discriminant(a, b, c)));
 		double root1 = numanswer1/(2*a);
 		double root2 = numanswer2/(2*a);
+		double larger = max(root1, root2);
+		double smaller = min2(root1, root2);
+		
 		if(discriminant(a, b, c)>0) {
-			return round2(root1) + " and " + round2(root2); //root1 is the larger number as it was the sqrt of the discriminant added as opposed to subtracted
+			return round2(smaller) + " and " + round2(larger); 
 		}
 		else {
 			return (round2(root1))+"";
